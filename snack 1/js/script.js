@@ -21,11 +21,18 @@ const bikesArrObj = [
   }
 ];
 
-bikesArrObj.forEach((curBike) => {
+
+let weightMin = bikesArrObj[0].weight;
+let indexWeightMin = 0;
+
+bikesArrObj.forEach((curBike, index) => {
   const {name, weight} = curBike;
-  let counter = 0; 
-
-  
-
-  console.log(counter, name, weight);
+  if (weight < weightMin) {
+    weightMin = weight;
+    indexWeightMin = index;
+  } 
 })
+
+console.log(bikesArrObj[indexWeightMin].name, weightMin);
+
+document.getElementById('result').innerHTML = `${bikesArrObj[indexWeightMin].name} ${weightMin}`;
