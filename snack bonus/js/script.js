@@ -19,17 +19,17 @@ let autoEle = [];
 let autoMet = [];
 
 automobili.forEach((curAuto, index) => {
-  const {alimentazione, marca} = curAuto;
+  const {alimentazione, marca} = automobili;
 
-  if (alimentazione === 'benzina') {
+  if (curAuto.alimentazione === 'benzina') {
     autoBen.push(curAuto)
-  } else if (alimentazione === 'diesel') {
+  } else if (curAuto.alimentazione === 'diesel') {
     autoDie.push(curAuto)
-  } else if (alimentazione === 'gpl') {
+  } else if (curAuto.alimentazione === 'gpl') {
     autoGpl.push(curAuto)
-  } else if (alimentazione === 'elettrico') {
+  } else if (curAuto.alimentazione === 'elettrico') {
     autoEle.push(curAuto)
-  } else if (alimentazione === 'metano') {
+  } else if (curAuto.alimentazione === 'metano') {
     autoMet.push(curAuto)
   } 
 })
