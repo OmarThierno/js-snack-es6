@@ -34,4 +34,4 @@ automobili.forEach((curAuto, index) => {
   } 
 })
 
-console.log(autoBen);
+console.log(autoBen, autoDie, autoGpl, autoEle, autoMet);
