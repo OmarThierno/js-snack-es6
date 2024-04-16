@@ -10,3 +10,28 @@ const automobili = [
   { marca: "Mercedes-Benz", modello: "EQC", alimentazione: "elettrico" },
   { marca: "Opel", modello: "Corsa", alimentazione: "gpl" }
 ];
+
+
+let autoBen = [];
+let autoDie = [];
+let autoGpl = [];
+let autoEle = [];
+let autoMet = [];
+
+automobili.forEach((curAuto, index) => {
+  const {alimentazione, marca} = automobili;
+
+  if (curAuto.alimentazione === 'benzina') {
+    autoBen.push(curAuto)
+  } else if (curAuto.alimentazione === 'diesel') {
+    autoDie.push(curAuto)
+  } else if (curAuto.alimentazione === 'gpl') {
+    autoGpl.push(curAuto)
+  } else if (curAuto.alimentazione === 'elettrico') {
+    autoEle.push(curAuto)
+  } else if (curAuto.alimentazione === 'metano') {
+    autoMet.push(curAuto)
+  } 
+})
+
+console.log(autoBen, autoDie, autoGpl, autoEle, autoMet);
